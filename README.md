@@ -1,6 +1,6 @@
 # AI API Test Tool
 
-一个功能强大的 Windows API 测试工具，专为测试 API 接口的稳定性和一致性而设计。支持批量请求、响应对比、差异分析等功能。
+一个功能强大的 AI API 测试工具，专为测试AI API 接口的稳定性和一致性而设计。支持批量请求、响应对比、差异分析等功能。
 
 <img width="1842" height="1007" alt="" src="https://github.com/yileicn/AI-API-Test-Tool/blob/main/images/UI.png" />
 
