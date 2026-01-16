@@ -2,6 +2,9 @@
 
 一个功能强大的 Windows API 测试工具，专为测试 API 接口的稳定性和一致性而设计。支持批量请求、响应对比、差异分析等功能。
 
+<img width="1842" height="1007" alt="" src="https://github.com/user-attachments/assets/7170a4ff-e081-4b07-b167-2f025871f620" />
+
+
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=flat-square&logo=dotnet)
 ![Windows Forms](https://img.shields.io/badge/Windows%20Forms-Desktop-0078D6?style=flat-square&logo=windows)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
