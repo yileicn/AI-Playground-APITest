@@ -1,6 +1,6 @@
-﻿namespace APITestTool
+namespace APITestTool
 {
-    partial class MainFrom
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,703 +28,244 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            splitContainerMain = new SplitContainer();
-            panelRequest = new Panel();
-            lblSavedRequests = new Label();
-            lstSavedRequests = new ListBox();
-            btnSaveRequest = new Button();
-            btnDeleteRequest = new Button();
-            btnExportRequests = new Button();
-            btnImportRequests = new Button();
-            lblUrl = new Label();
-            txtUrl = new TextBox();
-            lblMethod = new Label();
-            cboMethod = new ComboBox();
-            lblHeaders = new Label();
-            txtHeaders = new TextBox();
-            lblBody = new Label();
-            txtBody = new TextBox();
-            btnTextToJson = new Button();
-            lblCompareFields = new Label();
-            txtCompareFields = new TextBox();
-            chkCompareFieldsOnly = new CheckBox();
-            lblCallCount = new Label();
-            numCallCount = new NumericUpDown();
-            lblTimeout = new Label();
-            numTimeout = new NumericUpDown();
-            lblDelay = new Label();
-            numDelay = new NumericUpDown();
-            chkParallel = new CheckBox();
-            btnExecute = new Button();
-            btnStop = new Button();
-            btnClear = new Button();
-            progressBar = new ProgressBar();
-            lblProgress = new Label();
-            panelResult = new Panel();
-            tabControlResult = new TabControl();
-            tabPageAllResults = new TabPage();
-            dgvResults = new DataGridView();
-            tabPageDifferences = new TabPage();
-            txtDifferences = new RichTextBox();
-            tabPageStatistics = new TabPage();
-            txtStatistics = new RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)splitContainerMain).BeginInit();
-            splitContainerMain.Panel1.SuspendLayout();
-            splitContainerMain.Panel2.SuspendLayout();
-            splitContainerMain.SuspendLayout();
-            panelRequest.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numCallCount).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numTimeout).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numDelay).BeginInit();
-            panelResult.SuspendLayout();
-            tabControlResult.SuspendLayout();
-            tabPageAllResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvResults).BeginInit();
-            tabPageDifferences.SuspendLayout();
-            tabPageStatistics.SuspendLayout();
+            panelHeader = new Panel();
+            lblTitle = new Label();
+            panelContent = new Panel();
+            lblVersion = new Label();
+            lblInfo = new Label();
+            panelCardPromptTest = new Panel();
+            btnPromptTest = new Button();
+            lblCardPromptTestDesc = new Label();
+            lblCardPromptTestTitle = new Label();
+            panelCardPromptTestTopBar = new Panel();
+            panelCardApiTest = new Panel();
+            btnApiTest = new Button();
+            lblCardApiTestDesc = new Label();
+            lblCardApiTestTitle = new Label();
+            panelCardApiTestTopBar = new Panel();
+            panelHeader.SuspendLayout();
+            panelContent.SuspendLayout();
+            panelCardPromptTest.SuspendLayout();
+            panelCardApiTest.SuspendLayout();
             SuspendLayout();
             // 
-            // splitContainerMain
-            // 
-            splitContainerMain.Dock = DockStyle.Fill;
-            splitContainerMain.Location = new Point(0, 0);
-            splitContainerMain.Name = "splitContainerMain";
-            // 
-            // splitContainerMain.Panel1
-            // 
-            splitContainerMain.Panel1.Controls.Add(panelRequest);
-            // 
-            // splitContainerMain.Panel2
-            // 
-            splitContainerMain.Panel2.Controls.Add(panelResult);
-            splitContainerMain.Size = new Size(1400, 950);
-            splitContainerMain.SplitterDistance = 450;
-            splitContainerMain.SplitterWidth = 6;
-            splitContainerMain.TabIndex = 0;
-            // 
-            // panelRequest
-            // 
-            panelRequest.AutoScroll = true;
-            panelRequest.BackColor = Color.FromArgb(30, 30, 46);
-            panelRequest.Controls.Add(lblSavedRequests);
-            panelRequest.Controls.Add(lstSavedRequests);
-            panelRequest.Controls.Add(btnSaveRequest);
-            panelRequest.Controls.Add(btnDeleteRequest);
-            panelRequest.Controls.Add(btnExportRequests);
-            panelRequest.Controls.Add(btnImportRequests);
-            panelRequest.Controls.Add(lblUrl);
-            panelRequest.Controls.Add(txtUrl);
-            panelRequest.Controls.Add(lblMethod);
-            panelRequest.Controls.Add(cboMethod);
-            panelRequest.Controls.Add(lblHeaders);
-            panelRequest.Controls.Add(txtHeaders);
-            panelRequest.Controls.Add(lblBody);
-            panelRequest.Controls.Add(txtBody);
-            panelRequest.Controls.Add(btnTextToJson);
-            panelRequest.Controls.Add(lblCompareFields);
-            panelRequest.Controls.Add(txtCompareFields);
-            panelRequest.Controls.Add(chkCompareFieldsOnly);
-            panelRequest.Controls.Add(lblCallCount);
-            panelRequest.Controls.Add(numCallCount);
-            panelRequest.Controls.Add(lblTimeout);
-            panelRequest.Controls.Add(numTimeout);
-            panelRequest.Controls.Add(lblDelay);
-            panelRequest.Controls.Add(numDelay);
-            panelRequest.Controls.Add(chkParallel);
-            panelRequest.Controls.Add(btnExecute);
-            panelRequest.Controls.Add(btnStop);
-            panelRequest.Controls.Add(btnClear);
-            panelRequest.Controls.Add(progressBar);
-            panelRequest.Controls.Add(lblProgress);
-            panelRequest.Dock = DockStyle.Fill;
-            panelRequest.Location = new Point(0, 0);
-            panelRequest.Name = "panelRequest";
-            panelRequest.Padding = new Padding(20);
-            panelRequest.Size = new Size(450, 950);
-            panelRequest.TabIndex = 0;
-            // 
-            // lblSavedRequests
-            // 
-            lblSavedRequests.AutoSize = true;
-            lblSavedRequests.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblSavedRequests.ForeColor = Color.FromArgb(203, 166, 247);
-            lblSavedRequests.Location = new Point(20, 15);
-            lblSavedRequests.Name = "lblSavedRequests";
-            lblSavedRequests.Size = new Size(137, 18);
-            lblSavedRequests.TabIndex = 0;
-            lblSavedRequests.Text = "📁 已保存的请求";
-            // 
-            // lstSavedRequests
-            // 
-            lstSavedRequests.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lstSavedRequests.BackColor = Color.FromArgb(49, 50, 68);
-            lstSavedRequests.BorderStyle = BorderStyle.None;
-            lstSavedRequests.Font = new Font("Cascadia Code", 9F);
-            lstSavedRequests.ForeColor = Color.FromArgb(205, 214, 244);
-            lstSavedRequests.Location = new Point(20, 38);
-            lstSavedRequests.Name = "lstSavedRequests";
-            lstSavedRequests.Size = new Size(410, 64);
-            lstSavedRequests.TabIndex = 0;
-            lstSavedRequests.SelectedIndexChanged += LstSavedRequests_SelectedIndexChanged;
-            lstSavedRequests.DoubleClick += LstSavedRequests_DoubleClick;
-            // 
-            // btnSaveRequest
-            // 
-            btnSaveRequest.BackColor = Color.FromArgb(166, 227, 161);
-            btnSaveRequest.Cursor = Cursors.Hand;
-            btnSaveRequest.FlatAppearance.BorderSize = 0;
-            btnSaveRequest.FlatStyle = FlatStyle.Flat;
-            btnSaveRequest.Font = new Font("Cascadia Code", 9F, FontStyle.Bold);
-            btnSaveRequest.ForeColor = Color.FromArgb(30, 30, 46);
-            btnSaveRequest.Location = new Point(20, 107);
-            btnSaveRequest.Name = "btnSaveRequest";
-            btnSaveRequest.Size = new Size(95, 26);
-            btnSaveRequest.TabIndex = 1;
-            btnSaveRequest.Text = "💾 保存";
-            btnSaveRequest.UseVisualStyleBackColor = false;
-            btnSaveRequest.Click += BtnSaveRequest_Click;
-            // 
-            // btnDeleteRequest
-            // 
-            btnDeleteRequest.BackColor = Color.FromArgb(243, 139, 168);
-            btnDeleteRequest.Cursor = Cursors.Hand;
-            btnDeleteRequest.FlatAppearance.BorderSize = 0;
-            btnDeleteRequest.FlatStyle = FlatStyle.Flat;
-            btnDeleteRequest.Font = new Font("Cascadia Code", 9F, FontStyle.Bold);
-            btnDeleteRequest.ForeColor = Color.FromArgb(30, 30, 46);
-            btnDeleteRequest.Location = new Point(120, 107);
-            btnDeleteRequest.Name = "btnDeleteRequest";
-            btnDeleteRequest.Size = new Size(95, 26);
-            btnDeleteRequest.TabIndex = 2;
-            btnDeleteRequest.Text = "🗑️ 删除";
-            btnDeleteRequest.UseVisualStyleBackColor = false;
-            btnDeleteRequest.Click += BtnDeleteRequest_Click;
-            // 
-            // btnExportRequests
-            // 
-            btnExportRequests.BackColor = Color.FromArgb(137, 180, 250);
-            btnExportRequests.Cursor = Cursors.Hand;
-            btnExportRequests.FlatAppearance.BorderSize = 0;
-            btnExportRequests.FlatStyle = FlatStyle.Flat;
-            btnExportRequests.Font = new Font("Cascadia Code", 9F, FontStyle.Bold);
-            btnExportRequests.ForeColor = Color.FromArgb(30, 30, 46);
-            btnExportRequests.Location = new Point(220, 107);
-            btnExportRequests.Name = "btnExportRequests";
-            btnExportRequests.Size = new Size(95, 26);
-            btnExportRequests.TabIndex = 3;
-            btnExportRequests.Text = "📤 导出";
-            btnExportRequests.UseVisualStyleBackColor = false;
-            btnExportRequests.Click += BtnExportRequests_Click;
-            // 
-            // btnImportRequests
-            // 
-            btnImportRequests.BackColor = Color.FromArgb(249, 226, 175);
-            btnImportRequests.Cursor = Cursors.Hand;
-            btnImportRequests.FlatAppearance.BorderSize = 0;
-            btnImportRequests.FlatStyle = FlatStyle.Flat;
-            btnImportRequests.Font = new Font("Cascadia Code", 9F, FontStyle.Bold);
-            btnImportRequests.ForeColor = Color.FromArgb(30, 30, 46);
-            btnImportRequests.Location = new Point(320, 107);
-            btnImportRequests.Name = "btnImportRequests";
-            btnImportRequests.Size = new Size(110, 26);
-            btnImportRequests.TabIndex = 4;
-            btnImportRequests.Text = "📥 导入";
-            btnImportRequests.UseVisualStyleBackColor = false;
-            btnImportRequests.Click += BtnImportRequests_Click;
-            // 
-            // lblUrl
-            // 
-            lblUrl.AutoSize = true;
-            lblUrl.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblUrl.ForeColor = Color.FromArgb(166, 227, 161);
-            lblUrl.Location = new Point(20, 145);
-            lblUrl.Name = "lblUrl";
-            lblUrl.Size = new Size(64, 18);
-            lblUrl.TabIndex = 5;
-            lblUrl.Text = "API URL";
-            // 
-            // txtUrl
-            // 
-            txtUrl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtUrl.BackColor = Color.FromArgb(49, 50, 68);
-            txtUrl.BorderStyle = BorderStyle.FixedSingle;
-            txtUrl.Font = new Font("Cascadia Code", 10F);
-            txtUrl.ForeColor = Color.FromArgb(205, 214, 244);
-            txtUrl.Location = new Point(20, 166);
-            txtUrl.Name = "txtUrl";
-            txtUrl.Size = new Size(410, 23);
-            txtUrl.TabIndex = 5;
-            txtUrl.Text = "https://api.example.com/endpoint";
-            // 
-            // lblMethod
-            // 
-            lblMethod.AutoSize = true;
-            lblMethod.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblMethod.ForeColor = Color.FromArgb(166, 227, 161);
-            lblMethod.Location = new Point(20, 198);
-            lblMethod.Name = "lblMethod";
-            lblMethod.Size = new Size(56, 18);
-            lblMethod.TabIndex = 6;
-            lblMethod.Text = "Method";
-            // 
-            // cboMethod
-            // 
-            cboMethod.BackColor = Color.FromArgb(49, 50, 68);
-            cboMethod.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboMethod.FlatStyle = FlatStyle.Flat;
-            cboMethod.Font = new Font("Cascadia Code", 10F);
-            cboMethod.ForeColor = Color.FromArgb(205, 214, 244);
-            cboMethod.Items.AddRange(new object[] { "GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS" });
-            cboMethod.Location = new Point(20, 219);
-            cboMethod.Name = "cboMethod";
-            cboMethod.Size = new Size(120, 25);
-            cboMethod.TabIndex = 6;
-            // 
-            // lblHeaders
-            // 
-            lblHeaders.AutoSize = true;
-            lblHeaders.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblHeaders.ForeColor = Color.FromArgb(166, 227, 161);
-            lblHeaders.Location = new Point(20, 252);
-            lblHeaders.Name = "lblHeaders";
-            lblHeaders.Size = new Size(154, 18);
-            lblHeaders.TabIndex = 7;
-            lblHeaders.Text = "Headers (JSON格式)";
-            // 
-            // txtHeaders
-            // 
-            txtHeaders.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtHeaders.BackColor = Color.FromArgb(49, 50, 68);
-            txtHeaders.BorderStyle = BorderStyle.FixedSingle;
-            txtHeaders.Font = new Font("Cascadia Code", 9F);
-            txtHeaders.ForeColor = Color.FromArgb(205, 214, 244);
-            txtHeaders.Location = new Point(20, 273);
-            txtHeaders.Multiline = true;
-            txtHeaders.Name = "txtHeaders";
-            txtHeaders.ScrollBars = ScrollBars.Vertical;
-            txtHeaders.Size = new Size(410, 80);
-            txtHeaders.TabIndex = 7;
-            txtHeaders.Text = "{\r\n  \"Content-Type\": \"application/json\",\r\n  \"Authorization\": \"Bearer your-token\"\r\n}";
-            // 
-            // lblBody
-            // 
-            lblBody.AutoSize = true;
-            lblBody.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblBody.ForeColor = Color.FromArgb(166, 227, 161);
-            lblBody.Location = new Point(20, 361);
-            lblBody.Name = "lblBody";
-            lblBody.Size = new Size(130, 18);
-            lblBody.TabIndex = 8;
-            lblBody.Text = "Body (JSON格式)";
-            // 
-            // txtBody
-            // 
-            txtBody.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtBody.BackColor = Color.FromArgb(49, 50, 68);
-            txtBody.BorderStyle = BorderStyle.FixedSingle;
-            txtBody.Font = new Font("Cascadia Code", 9F);
-            txtBody.ForeColor = Color.FromArgb(205, 214, 244);
-            txtBody.Location = new Point(20, 382);
-            txtBody.Multiline = true;
-            txtBody.Name = "txtBody";
-            txtBody.ScrollBars = ScrollBars.Both;
-            txtBody.Size = new Size(410, 140);
-            txtBody.TabIndex = 8;
-            txtBody.Text = "{\r\n  \"key\": \"value\"\r\n}";
-            // 
-            // btnTextToJson
-            // 
-            btnTextToJson.BackColor = Color.FromArgb(148, 226, 213);
-            btnTextToJson.Cursor = Cursors.Hand;
-            btnTextToJson.FlatAppearance.BorderSize = 0;
-            btnTextToJson.FlatStyle = FlatStyle.Flat;
-            btnTextToJson.Font = new Font("Cascadia Code", 9F, FontStyle.Bold);
-            btnTextToJson.ForeColor = Color.FromArgb(30, 30, 46);
-            btnTextToJson.Location = new Point(155, 358);
-            btnTextToJson.Name = "btnTextToJson";
-            btnTextToJson.Size = new Size(140, 22);
-            btnTextToJson.TabIndex = 19;
-            btnTextToJson.Text = "📝 文本转JSON";
-            btnTextToJson.UseVisualStyleBackColor = false;
-            btnTextToJson.Click += BtnTextToJson_Click;
-            // 
-            // lblCompareFields
-            // 
-            lblCompareFields.AutoSize = true;
-            lblCompareFields.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblCompareFields.ForeColor = Color.FromArgb(245, 194, 231);
-            lblCompareFields.Location = new Point(20, 532);
-            lblCompareFields.Name = "lblCompareFields";
-            lblCompareFields.Size = new Size(161, 18);
-            lblCompareFields.TabIndex = 20;
-            lblCompareFields.Text = "🎯 对比字段 (可选)";
-            // 
-            // txtCompareFields
-            // 
-            txtCompareFields.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtCompareFields.BackColor = Color.FromArgb(49, 50, 68);
-            txtCompareFields.BorderStyle = BorderStyle.FixedSingle;
-            txtCompareFields.Font = new Font("Cascadia Code", 9F);
-            txtCompareFields.ForeColor = Color.FromArgb(205, 214, 244);
-            txtCompareFields.Location = new Point(20, 553);
-            txtCompareFields.Multiline = true;
-            txtCompareFields.Name = "txtCompareFields";
-            txtCompareFields.ScrollBars = ScrollBars.Vertical;
-            txtCompareFields.Size = new Size(410, 50);
-            txtCompareFields.TabIndex = 9;
-            // 
-            // chkCompareFieldsOnly
-            // 
-            chkCompareFieldsOnly.AutoSize = true;
-            chkCompareFieldsOnly.Font = new Font("Cascadia Code", 9F);
-            chkCompareFieldsOnly.ForeColor = Color.FromArgb(245, 194, 231);
-            chkCompareFieldsOnly.Location = new Point(20, 608);
-            chkCompareFieldsOnly.Name = "chkCompareFieldsOnly";
-            chkCompareFieldsOnly.Size = new Size(124, 20);
-            chkCompareFieldsOnly.TabIndex = 10;
-            chkCompareFieldsOnly.Text = "仅对比指定字段";
-            // 
-            // lblCallCount
-            // 
-            lblCallCount.AutoSize = true;
-            lblCallCount.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblCallCount.ForeColor = Color.FromArgb(249, 226, 175);
-            lblCallCount.Location = new Point(20, 638);
-            lblCallCount.Name = "lblCallCount";
-            lblCallCount.Size = new Size(76, 18);
-            lblCallCount.TabIndex = 21;
-            lblCallCount.Text = "调用次数";
-            // 
-            // numCallCount
-            // 
-            numCallCount.BackColor = Color.FromArgb(49, 50, 68);
-            numCallCount.BorderStyle = BorderStyle.FixedSingle;
-            numCallCount.Font = new Font("Cascadia Code", 10F);
-            numCallCount.ForeColor = Color.FromArgb(205, 214, 244);
-            numCallCount.Location = new Point(20, 659);
-            numCallCount.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            numCallCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numCallCount.Name = "numCallCount";
-            numCallCount.Size = new Size(100, 23);
-            numCallCount.TabIndex = 11;
-            numCallCount.Value = new decimal(new int[] { 10, 0, 0, 0 });
-            // 
-            // lblTimeout
-            // 
-            lblTimeout.AutoSize = true;
-            lblTimeout.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblTimeout.ForeColor = Color.FromArgb(249, 226, 175);
-            lblTimeout.Location = new Point(140, 638);
-            lblTimeout.Name = "lblTimeout";
-            lblTimeout.Size = new Size(75, 18);
-            lblTimeout.TabIndex = 22;
-            lblTimeout.Text = "超时(秒)";
-            // 
-            // numTimeout
-            // 
-            numTimeout.BackColor = Color.FromArgb(49, 50, 68);
-            numTimeout.BorderStyle = BorderStyle.FixedSingle;
-            numTimeout.Font = new Font("Cascadia Code", 10F);
-            numTimeout.ForeColor = Color.FromArgb(205, 214, 244);
-            numTimeout.Location = new Point(140, 659);
-            numTimeout.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
-            numTimeout.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numTimeout.Name = "numTimeout";
-            numTimeout.Size = new Size(80, 23);
-            numTimeout.TabIndex = 12;
-            numTimeout.Value = new decimal(new int[] { 30, 0, 0, 0 });
-            // 
-            // lblDelay
-            // 
-            lblDelay.AutoSize = true;
-            lblDelay.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            lblDelay.ForeColor = Color.FromArgb(249, 226, 175);
-            lblDelay.Location = new Point(240, 638);
-            lblDelay.Name = "lblDelay";
-            lblDelay.Size = new Size(74, 18);
-            lblDelay.TabIndex = 23;
-            lblDelay.Text = "间隔(ms)";
-            // 
-            // numDelay
-            // 
-            numDelay.BackColor = Color.FromArgb(49, 50, 68);
-            numDelay.BorderStyle = BorderStyle.FixedSingle;
-            numDelay.Font = new Font("Cascadia Code", 10F);
-            numDelay.ForeColor = Color.FromArgb(205, 214, 244);
-            numDelay.Location = new Point(240, 659);
-            numDelay.Maximum = new decimal(new int[] { 60000, 0, 0, 0 });
-            numDelay.Name = "numDelay";
-            numDelay.Size = new Size(80, 23);
-            numDelay.TabIndex = 13;
-            numDelay.Value = new decimal(new int[] { 100, 0, 0, 0 });
-            // 
-            // chkParallel
-            // 
-            chkParallel.AutoSize = true;
-            chkParallel.Font = new Font("Cascadia Code", 10F);
-            chkParallel.ForeColor = Color.FromArgb(203, 166, 247);
-            chkParallel.Location = new Point(340, 660);
-            chkParallel.Name = "chkParallel";
-            chkParallel.Size = new Size(91, 22);
-            chkParallel.TabIndex = 14;
-            chkParallel.Text = "并行执行";
-            // 
-            // btnExecute
-            // 
-            btnExecute.BackColor = Color.FromArgb(137, 180, 250);
-            btnExecute.Cursor = Cursors.Hand;
-            btnExecute.FlatAppearance.BorderSize = 0;
-            btnExecute.FlatStyle = FlatStyle.Flat;
-            btnExecute.Font = new Font("Cascadia Code", 12F, FontStyle.Bold);
-            btnExecute.ForeColor = Color.FromArgb(30, 30, 46);
-            btnExecute.Location = new Point(20, 700);
-            btnExecute.Name = "btnExecute";
-            btnExecute.Size = new Size(200, 45);
-            btnExecute.TabIndex = 15;
-            btnExecute.Text = "▶ 开始测试";
-            btnExecute.UseVisualStyleBackColor = false;
-            btnExecute.Click += BtnExecute_Click;
-            // 
-            // btnStop
-            // 
-            btnStop.BackColor = Color.FromArgb(243, 139, 168);
-            btnStop.Cursor = Cursors.Hand;
-            btnStop.Enabled = false;
-            btnStop.FlatAppearance.BorderSize = 0;
-            btnStop.FlatStyle = FlatStyle.Flat;
-            btnStop.Font = new Font("Cascadia Code", 12F, FontStyle.Bold);
-            btnStop.ForeColor = Color.FromArgb(30, 30, 46);
-            btnStop.Location = new Point(230, 700);
-            btnStop.Name = "btnStop";
-            btnStop.Size = new Size(95, 45);
-            btnStop.TabIndex = 16;
-            btnStop.Text = "■ 停止";
-            btnStop.UseVisualStyleBackColor = false;
-            btnStop.Click += BtnStop_Click;
-            // 
-            // btnClear
-            // 
-            btnClear.BackColor = Color.FromArgb(166, 173, 200);
-            btnClear.Cursor = Cursors.Hand;
-            btnClear.FlatAppearance.BorderSize = 0;
-            btnClear.FlatStyle = FlatStyle.Flat;
-            btnClear.Font = new Font("Cascadia Code", 12F, FontStyle.Bold);
-            btnClear.ForeColor = Color.FromArgb(30, 30, 46);
-            btnClear.Location = new Point(335, 700);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(95, 45);
-            btnClear.TabIndex = 17;
-            btnClear.Text = "清空";
-            btnClear.UseVisualStyleBackColor = false;
-            btnClear.Click += BtnClear_Click;
-            // 
-            // progressBar
-            // 
-            progressBar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            progressBar.Location = new Point(20, 755);
-            progressBar.Name = "progressBar";
-            progressBar.Size = new Size(410, 25);
-            progressBar.Style = ProgressBarStyle.Continuous;
-            progressBar.TabIndex = 18;
-            // 
-            // lblProgress
-            // 
-            lblProgress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblProgress.Font = new Font("Cascadia Code", 10F);
-            lblProgress.ForeColor = Color.FromArgb(205, 214, 244);
-            lblProgress.Location = new Point(20, 785);
-            lblProgress.Name = "lblProgress";
-            lblProgress.Size = new Size(410, 20);
-            lblProgress.TabIndex = 24;
-            lblProgress.Text = "就绪";
-            lblProgress.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panelResult
-            // 
-            panelResult.BackColor = Color.FromArgb(24, 24, 37);
-            panelResult.Controls.Add(tabControlResult);
-            panelResult.Dock = DockStyle.Fill;
-            panelResult.Location = new Point(0, 0);
-            panelResult.Name = "panelResult";
-            panelResult.Padding = new Padding(10);
-            panelResult.Size = new Size(944, 950);
-            panelResult.TabIndex = 0;
-            // 
-            // tabControlResult
-            // 
-            tabControlResult.Controls.Add(tabPageAllResults);
-            tabControlResult.Controls.Add(tabPageDifferences);
-            tabControlResult.Controls.Add(tabPageStatistics);
-            tabControlResult.Dock = DockStyle.Fill;
-            tabControlResult.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
-            tabControlResult.Location = new Point(10, 10);
-            tabControlResult.Name = "tabControlResult";
-            tabControlResult.SelectedIndex = 0;
-            tabControlResult.Size = new Size(924, 930);
-            tabControlResult.TabIndex = 0;
-            // 
-            // tabPageAllResults
-            // 
-            tabPageAllResults.BackColor = Color.FromArgb(30, 30, 46);
-            tabPageAllResults.Controls.Add(dgvResults);
-            tabPageAllResults.Location = new Point(4, 26);
-            tabPageAllResults.Name = "tabPageAllResults";
-            tabPageAllResults.Padding = new Padding(10);
-            tabPageAllResults.Size = new Size(916, 900);
-            tabPageAllResults.TabIndex = 0;
-            tabPageAllResults.Text = "📋 所有结果";
-            // 
-            // dgvResults
-            // 
-            dgvResults.AllowUserToAddRows = false;
-            dgvResults.AllowUserToDeleteRows = false;
-            dgvResults.BackgroundColor = Color.FromArgb(30, 30, 46);
-            dgvResults.BorderStyle = BorderStyle.None;
-            dgvResults.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvResults.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvResults.ColumnHeadersHeight = 35;
-            dgvResults.Dock = DockStyle.Fill;
-            dgvResults.EnableHeadersVisualStyles = false;
-            dgvResults.GridColor = Color.FromArgb(49, 50, 68);
-            dgvResults.Location = new Point(10, 10);
-            dgvResults.Name = "dgvResults";
-            dgvResults.ReadOnly = true;
-            dgvResults.RowHeadersVisible = false;
-            dgvResults.RowTemplate.Height = 30;
-            dgvResults.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvResults.Size = new Size(896, 880);
-            dgvResults.TabIndex = 0;
-            dgvResults.CellDoubleClick += DgvResults_CellDoubleClick;
-            // 
-            // tabPageDifferences
-            // 
-            tabPageDifferences.BackColor = Color.FromArgb(30, 30, 46);
-            tabPageDifferences.Controls.Add(txtDifferences);
-            tabPageDifferences.Location = new Point(4, 26);
-            tabPageDifferences.Name = "tabPageDifferences";
-            tabPageDifferences.Padding = new Padding(10);
-            tabPageDifferences.Size = new Size(916, 900);
-            tabPageDifferences.TabIndex = 1;
-            tabPageDifferences.Text = "🔍 差异对比";
-            // 
-            // txtDifferences
-            // 
-            txtDifferences.BackColor = Color.FromArgb(30, 30, 46);
-            txtDifferences.BorderStyle = BorderStyle.None;
-            txtDifferences.Dock = DockStyle.Fill;
-            txtDifferences.Font = new Font("Cascadia Code", 10F);
-            txtDifferences.ForeColor = Color.FromArgb(205, 214, 244);
-            txtDifferences.Location = new Point(10, 10);
-            txtDifferences.Name = "txtDifferences";
-            txtDifferences.ReadOnly = true;
-            txtDifferences.Size = new Size(896, 880);
-            txtDifferences.TabIndex = 0;
-            txtDifferences.Text = "";
-            // 
-            // tabPageStatistics
-            // 
-            tabPageStatistics.BackColor = Color.FromArgb(30, 30, 46);
-            tabPageStatistics.Controls.Add(txtStatistics);
-            tabPageStatistics.Location = new Point(4, 26);
-            tabPageStatistics.Name = "tabPageStatistics";
-            tabPageStatistics.Padding = new Padding(10);
-            tabPageStatistics.Size = new Size(916, 900);
-            tabPageStatistics.TabIndex = 2;
-            tabPageStatistics.Text = "📊 统计信息";
-            // 
-            // txtStatistics
-            // 
-            txtStatistics.BackColor = Color.FromArgb(30, 30, 46);
-            txtStatistics.BorderStyle = BorderStyle.None;
-            txtStatistics.Dock = DockStyle.Fill;
-            txtStatistics.Font = new Font("Cascadia Code", 10F);
-            txtStatistics.ForeColor = Color.FromArgb(205, 214, 244);
-            txtStatistics.Location = new Point(10, 10);
-            txtStatistics.Name = "txtStatistics";
-            txtStatistics.ReadOnly = true;
-            txtStatistics.Size = new Size(896, 880);
-            txtStatistics.TabIndex = 0;
-            txtStatistics.Text = "";
-            // 
-            // MainFrom
+            // panelHeader
+            // 
+            panelHeader.BackColor = Color.FromArgb(30, 30, 46);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Padding = new Padding(40, 30, 40, 20);
+            panelHeader.Size = new Size(900, 150);
+            panelHeader.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Cascadia Code", 28F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(205, 214, 244);
+            lblTitle.Location = new Point(40, 35);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(360, 50);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "🚀 AI Test Tool";
+            // 
+            // panelContent
+            // 
+            panelContent.BackColor = Color.FromArgb(24, 24, 37);
+            panelContent.Controls.Add(lblVersion);
+            panelContent.Controls.Add(lblInfo);
+            panelContent.Controls.Add(panelCardPromptTest);
+            panelContent.Controls.Add(panelCardApiTest);
+            panelContent.Dock = DockStyle.Fill;
+            panelContent.Location = new Point(0, 150);
+            panelContent.Name = "panelContent";
+            panelContent.Padding = new Padding(40);
+            panelContent.Size = new Size(900, 450);
+            panelContent.TabIndex = 1;
+            // 
+            // lblVersion
+            // 
+            lblVersion.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            lblVersion.AutoSize = true;
+            lblVersion.Font = new Font("Cascadia Code", 9F);
+            lblVersion.ForeColor = Color.FromArgb(88, 91, 112);
+            lblVersion.Location = new Point(600, 380);
+            lblVersion.Name = "lblVersion";
+            lblVersion.Size = new Size(301, 16);
+            lblVersion.TabIndex = 3;
+            lblVersion.Text = "v1.0.0 | .NET 8.0 | Catppuccin Mocha Theme";
+            // 
+            // lblInfo
+            // 
+            lblInfo.AutoSize = true;
+            lblInfo.Font = new Font("Cascadia Code", 10F);
+            lblInfo.ForeColor = Color.FromArgb(166, 173, 200);
+            lblInfo.Location = new Point(40, 300);
+            lblInfo.Name = "lblInfo";
+            lblInfo.Size = new Size(242, 18);
+            lblInfo.TabIndex = 2;
+            lblInfo.Text = "💡 提示: 选择一个工具开始使用";
+            // 
+            // panelCardPromptTest
+            // 
+            panelCardPromptTest.BackColor = Color.FromArgb(30, 30, 46);
+            panelCardPromptTest.Controls.Add(btnPromptTest);
+            panelCardPromptTest.Controls.Add(lblCardPromptTestDesc);
+            panelCardPromptTest.Controls.Add(lblCardPromptTestTitle);
+            panelCardPromptTest.Controls.Add(panelCardPromptTestTopBar);
+            panelCardPromptTest.Cursor = Cursors.Hand;
+            panelCardPromptTest.Location = new Point(440, 40);
+            panelCardPromptTest.Name = "panelCardPromptTest";
+            panelCardPromptTest.Size = new Size(380, 220);
+            panelCardPromptTest.TabIndex = 1;
+            // 
+            // btnPromptTest
+            // 
+            btnPromptTest.BackColor = Color.FromArgb(203, 166, 247);
+            btnPromptTest.Cursor = Cursors.Hand;
+            btnPromptTest.FlatAppearance.BorderSize = 0;
+            btnPromptTest.FlatStyle = FlatStyle.Flat;
+            btnPromptTest.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
+            btnPromptTest.ForeColor = Color.FromArgb(24, 24, 37);
+            btnPromptTest.Location = new Point(260, 165);
+            btnPromptTest.Name = "btnPromptTest";
+            btnPromptTest.Size = new Size(100, 35);
+            btnPromptTest.TabIndex = 3;
+            btnPromptTest.Text = "打开";
+            btnPromptTest.UseVisualStyleBackColor = false;
+            btnPromptTest.Click += BtnPromptTest_Click;
+            // 
+            // lblCardPromptTestDesc
+            // 
+            lblCardPromptTestDesc.Font = new Font("Cascadia Code", 10F);
+            lblCardPromptTestDesc.ForeColor = Color.FromArgb(166, 173, 200);
+            lblCardPromptTestDesc.Location = new Point(20, 65);
+            lblCardPromptTestDesc.Name = "lblCardPromptTestDesc";
+            lblCardPromptTestDesc.Size = new Size(340, 100);
+            lblCardPromptTestDesc.TabIndex = 2;
+            lblCardPromptTestDesc.Text = "测试和优化 OpenAI Prompt\r\n支持变量模板、参数调节\r\n实时对话测试、Token 统计";
+            // 
+            // lblCardPromptTestTitle
+            // 
+            lblCardPromptTestTitle.AutoSize = true;
+            lblCardPromptTestTitle.Font = new Font("Cascadia Code", 16F, FontStyle.Bold);
+            lblCardPromptTestTitle.ForeColor = Color.FromArgb(203, 166, 247);
+            lblCardPromptTestTitle.Location = new Point(20, 25);
+            lblCardPromptTestTitle.Name = "lblCardPromptTestTitle";
+            lblCardPromptTestTitle.Size = new Size(225, 29);
+            lblCardPromptTestTitle.TabIndex = 1;
+            lblCardPromptTestTitle.Text = "🤖 AI Playground";
+            // 
+            // panelCardPromptTestTopBar
+            // 
+            panelCardPromptTestTopBar.BackColor = Color.FromArgb(203, 166, 247);
+            panelCardPromptTestTopBar.Dock = DockStyle.Top;
+            panelCardPromptTestTopBar.Location = new Point(0, 0);
+            panelCardPromptTestTopBar.Name = "panelCardPromptTestTopBar";
+            panelCardPromptTestTopBar.Size = new Size(380, 4);
+            panelCardPromptTestTopBar.TabIndex = 0;
+            // 
+            // panelCardApiTest
+            // 
+            panelCardApiTest.BackColor = Color.FromArgb(30, 30, 46);
+            panelCardApiTest.Controls.Add(btnApiTest);
+            panelCardApiTest.Controls.Add(lblCardApiTestDesc);
+            panelCardApiTest.Controls.Add(lblCardApiTestTitle);
+            panelCardApiTest.Controls.Add(panelCardApiTestTopBar);
+            panelCardApiTest.Cursor = Cursors.Hand;
+            panelCardApiTest.Location = new Point(40, 40);
+            panelCardApiTest.Name = "panelCardApiTest";
+            panelCardApiTest.Size = new Size(380, 220);
+            panelCardApiTest.TabIndex = 0;
+            // 
+            // btnApiTest
+            // 
+            btnApiTest.BackColor = Color.FromArgb(137, 180, 250);
+            btnApiTest.Cursor = Cursors.Hand;
+            btnApiTest.FlatAppearance.BorderSize = 0;
+            btnApiTest.FlatStyle = FlatStyle.Flat;
+            btnApiTest.Font = new Font("Cascadia Code", 10F, FontStyle.Bold);
+            btnApiTest.ForeColor = Color.FromArgb(24, 24, 37);
+            btnApiTest.Location = new Point(260, 165);
+            btnApiTest.Name = "btnApiTest";
+            btnApiTest.Size = new Size(100, 35);
+            btnApiTest.TabIndex = 3;
+            btnApiTest.Text = "打开";
+            btnApiTest.UseVisualStyleBackColor = false;
+            btnApiTest.Click += BtnApiTest_Click;
+            // 
+            // lblCardApiTestDesc
+            // 
+            lblCardApiTestDesc.Font = new Font("Cascadia Code", 10F);
+            lblCardApiTestDesc.ForeColor = Color.FromArgb(166, 173, 200);
+            lblCardApiTestDesc.Location = new Point(20, 65);
+            lblCardApiTestDesc.Name = "lblCardApiTestDesc";
+            lblCardApiTestDesc.Size = new Size(340, 100);
+            lblCardApiTestDesc.TabIndex = 2;
+            lblCardApiTestDesc.Text = "测试AI API 稳定性和一致性\r\n批量请求、自动对比响应差异\r\n性能统计与详细报告";
+            // 
+            // lblCardApiTestTitle
+            // 
+            lblCardApiTestTitle.AutoSize = true;
+            lblCardApiTestTitle.Font = new Font("Cascadia Code", 16F, FontStyle.Bold);
+            lblCardApiTestTitle.ForeColor = Color.FromArgb(137, 180, 250);
+            lblCardApiTestTitle.Location = new Point(20, 25);
+            lblCardApiTestTitle.Name = "lblCardApiTestTitle";
+            lblCardApiTestTitle.Size = new Size(329, 29);
+            lblCardApiTestTitle.TabIndex = 1;
+            lblCardApiTestTitle.Text = "🔌 AI API Stability Test";
+            // 
+            // panelCardApiTestTopBar
+            // 
+            panelCardApiTestTopBar.BackColor = Color.FromArgb(137, 180, 250);
+            panelCardApiTestTopBar.Dock = DockStyle.Top;
+            panelCardApiTestTopBar.Location = new Point(0, 0);
+            panelCardApiTestTopBar.Name = "panelCardApiTestTopBar";
+            panelCardApiTestTopBar.Size = new Size(380, 4);
+            panelCardApiTestTopBar.TabIndex = 0;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 24, 37);
-            ClientSize = new Size(1400, 950);
-            Controls.Add(splitContainerMain);
-            MinimumSize = new Size(1200, 850);
-            Name = "MainFrom";
+            ClientSize = new Size(900, 600);
+            Controls.Add(panelContent);
+            Controls.Add(panelHeader);
+            MinimumSize = new Size(800, 500);
+            Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "🚀 AI API Test Tool";
-            splitContainerMain.Panel1.ResumeLayout(false);
-            splitContainerMain.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainerMain).EndInit();
-            splitContainerMain.ResumeLayout(false);
-            panelRequest.ResumeLayout(false);
-            panelRequest.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numCallCount).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numTimeout).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numDelay).EndInit();
-            panelResult.ResumeLayout(false);
-            tabControlResult.ResumeLayout(false);
-            tabPageAllResults.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvResults).EndInit();
-            tabPageDifferences.ResumeLayout(false);
-            tabPageStatistics.ResumeLayout(false);
+            Text = "🚀 AI Test Tool";
+            Resize += MainForm_Resize;
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelContent.ResumeLayout(false);
+            panelContent.PerformLayout();
+            panelCardPromptTest.ResumeLayout(false);
+            panelCardPromptTest.PerformLayout();
+            panelCardApiTest.ResumeLayout(false);
+            panelCardApiTest.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private SplitContainer splitContainerMain;
-        private Panel panelRequest;
-        private Panel panelResult;
-        
-        // 已保存请求控件
-        private Label lblSavedRequests;
-        private ListBox lstSavedRequests;
-        private Button btnSaveRequest;
-        private Button btnDeleteRequest;
-        private Button btnExportRequests;
-        private Button btnImportRequests;
-        
-        private Label lblUrl;
-        private TextBox txtUrl;
-        private Label lblMethod;
-        private ComboBox cboMethod;
-        private Label lblHeaders;
-        private TextBox txtHeaders;
-        private Label lblBody;
-        private TextBox txtBody;
-        private Button btnTextToJson;
-        
-        // 对比字段设置
-        private Label lblCompareFields;
-        private TextBox txtCompareFields;
-        private CheckBox chkCompareFieldsOnly;
-        
-        private Label lblCallCount;
-        private NumericUpDown numCallCount;
-        private Label lblTimeout;
-        private NumericUpDown numTimeout;
-        private Label lblDelay;
-        private NumericUpDown numDelay;
-        private CheckBox chkParallel;
-        private Button btnExecute;
-        private Button btnStop;
-        private Button btnClear;
-        private ProgressBar progressBar;
-        private Label lblProgress;
-        
-        private TabControl tabControlResult;
-        private TabPage tabPageAllResults;
-        private TabPage tabPageDifferences;
-        private TabPage tabPageStatistics;
-        private DataGridView dgvResults;
-        private RichTextBox txtDifferences;
-        private RichTextBox txtStatistics;
+        private Panel panelHeader;
+        private Label lblTitle;
+        private Panel panelContent;
+        private Panel panelCardApiTest;
+        private Panel panelCardApiTestTopBar;
+        private Label lblCardApiTestTitle;
+        private Label lblCardApiTestDesc;
+        private Button btnApiTest;
+        private Panel panelCardPromptTest;
+        private Panel panelCardPromptTestTopBar;
+        private Label lblCardPromptTestTitle;
+        private Label lblCardPromptTestDesc;
+        private Button btnPromptTest;
+        private Label lblInfo;
+        private Label lblVersion;
     }
 }

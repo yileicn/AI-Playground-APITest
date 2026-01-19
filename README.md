@@ -34,6 +34,14 @@
 - 支持导入/导出请求配置（JSON格式）
 - 双击快速加载已保存的请求
 
+### 🤖 AI Playground (NEW)
+- 支持 OpenAI GPT 系列模型（GPT-4o、GPT-4、GPT-3.5-turbo、o1 等）
+- 可视化配置 System Prompt 和 User Prompt
+- 支持**变量模板**，使用 `{{变量名}}` 动态替换内容
+- 参数调节：Temperature、Max Tokens、Top P
+- 实时对话测试，Token 使用统计
+- Prompt 配置保存、导入、导出
+
 ### 🛠️ 实用工具
 - 文本转 JSON 字符串工具（自动转义特殊字符）
 - 响应内容格式化显示
@@ -108,6 +116,16 @@ response.nested.deep.field
 - **删除请求** - 选中请求后点击"删除"按钮
 - **导出/导入** - 使用导出/导入按钮备份或分享请求配置
 
+### AI Playground
+
+1. 点击主界面右上角的 **"🤖 AI Playground"** 按钮打开 AI Playground 窗口
+2. 点击 **⚙️** 按钮配置 OpenAI API Key
+3. 选择模型并配置参数（Temperature、Max Tokens 等）
+4. 编写 System Prompt（系统提示词，支持 `{{变量名}}` 模板）
+5. 可选：添加变量，在 System Prompt 中使用 `{{变量名}}` 引用
+6. 在右侧对话区域输入消息并发送
+7. 查看 AI 响应和 Token 统计
+
 ## 🎨 界面预览
 
 工具采用现代深色主题设计，界面清晰直观：
@@ -126,9 +144,10 @@ response.nested.deep.field
 
 ```
 AI-API-Test-Tool/
-├── MainForm.cs              # 主窗体逻辑
-├── MainForm.Designer.cs     # 主窗体设计器代码
-├── MainForm.resx            # 主窗体资源文件
+├── MainForm.cs              # 主导航页面
+├── ApiTestForm.cs           # API Stability Test 窗体
+├── ApiTestForm.Designer.cs  # API 测试窗体设计器代码
+├── PromptTestForm.cs        # AI Playground 窗体
 ├── Models.cs                # 数据模型定义
 ├── Program.cs               # 程序入口
 ├── SaveRequestDialog.cs     # 保存请求对话框
@@ -139,9 +158,12 @@ AI-API-Test-Tool/
 
 ## 📝 数据存储
 
-已保存的请求配置存储在：
+配置文件存储在：
 ```
-%APPDATA%\APITestTool\saved_requests.json
+%APPDATA%\APITestTool\
+├── saved_requests.json      # 已保存的 API 请求配置
+├── saved_prompts.json       # 已保存的 Prompt 配置
+└── openai_settings.json     # OpenAI API 设置
 ```
 
 ## 🤝 贡献
